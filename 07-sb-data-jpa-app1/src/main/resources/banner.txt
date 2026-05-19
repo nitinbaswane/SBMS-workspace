@@ -1,0 +1,17 @@
+                  ____
+ ___  ___  ___   / __/  ___  ___  ___
+/ _ \/ _ \/ -_) / _ \  / _ \/ _ \/ -_)
+\___/_//_/\__/__\___/__\___/_//_/\__/
+            /___/  /___/
+
+
+
+            @Bean
+                public DataSource dataSource() {
+                    DriverManagerDataSource ds = new DriverManagerDataSource();
+                    ds.setDriverClassName("com.mysql.cj.jdbc.Driver");
+                    ds.setUrl("jdbc:mysql://localhost:3306/sbms1_db");
+                    ds.setUsername("root");
+                    ds.setPassword("nitin@N33");
+                    return ds;
+                }
