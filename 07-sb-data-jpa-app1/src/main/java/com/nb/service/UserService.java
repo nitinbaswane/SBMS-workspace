@@ -165,6 +165,6 @@ userRepo.deleteAllById(Arrays.asList(102,103));
     }
 
     public void deleteUser(){
-        userRepo.deleteUser(111);
+        userRepo.deleteUser(110);
     }
 }

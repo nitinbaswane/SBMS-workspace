@@ -3,6 +3,7 @@ package com.nb.service;
 import com.nb.entity.UserInfo;
 import com.nb.repository.UserRepo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Example;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
@@ -27,6 +28,15 @@ public class UserService {
         PageRequest pageRequest = PageRequest.of(pageNo-1, pageRecords);
 
         Page<UserInfo> all = userRepo.findAll(pageRequest);
+        all.forEach(System.out::println);
+    }
+
+    public void queryByExample(){
+        UserInfo u= new UserInfo();
+        u.setGender("male");
+        u.setCity("pune");
+        Example<UserInfo> userInfoExample = Example.of(u);
+        List<UserInfo> all = userRepo.findAll(userInfoExample);
         all.forEach(System.out::println);
     }
 }

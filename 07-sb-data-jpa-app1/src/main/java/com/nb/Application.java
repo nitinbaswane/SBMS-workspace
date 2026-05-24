@@ -29,7 +29,7 @@ public class Application {
 //        bean.getUserByGenderandcity();
 //        bean.getUserInfoAgeGreaaterThan();
 //        bean.getAllDataWithQuery();
-//        bean.deleteUser();
+        bean.deleteUser();
 
     }
 
